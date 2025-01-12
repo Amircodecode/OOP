@@ -557,7 +557,7 @@ class Myclass {
         Myclass(const Myclass &other) {
 
             this -> Size = other.Size;
-
+            
             this->data = new int[other.Size];
 
             for (int i = 0; i < other.Size; i++) {
@@ -565,7 +565,7 @@ class Myclass {
                 this->data[i] = other.data[i];
                 
             }
-            cout << "the copy destructor was called" << this << endl;
+            cout << "the copy constructor was called" << this << endl;
         }
 
 
@@ -590,11 +590,12 @@ void Foo(Myclass value) {
 
 int main() {
 
-    // Myclass a(6);
-    // Myclass b(5);
+    Myclass a(6);
+    Myclass b(a);
 
+   
 
-
+    
 
     return 0;
 }
