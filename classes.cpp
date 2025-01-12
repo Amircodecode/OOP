@@ -569,7 +569,7 @@ class Myclass {
         }
 
         Myclass & operator = (const Myclass & other) {
-            
+
             cout << "the function = was called" << this << endl;
 
             this-> Size = other.Size;
@@ -581,7 +581,9 @@ class Myclass {
             this->data = new int[other.Size];
 
             for (int i = 0; i < other.Size; i++) {
+
                 this->data[i] = other.data[i];
+                
             }
 
             return *this;
