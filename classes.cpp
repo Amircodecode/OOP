@@ -555,6 +555,7 @@ class Myclass {
         }
 
         Myclass(const Myclass &other) {
+
             this->data = new int[other.Size];
 
             for (int i = 0; i < other.Size; i++) {
@@ -587,9 +588,12 @@ void Foo(Myclass value) {
 
 int main() {
 
-    Myclass a(6);
-    Myclass b(5);
+    // Myclass a(6);
+    // Myclass b(5);
 
+    int size = 5;
+    int *array = new int[size];
+    cout << array << endl;
 
 
 
