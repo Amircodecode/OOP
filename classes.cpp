@@ -568,6 +568,26 @@ class Myclass {
             cout << "the copy constructor was called" << this << endl;
         }
 
+        Myclass & operator = (const Myclass & other) {
+            
+            cout << "the function = was called" << this << endl;
+
+            this-> Size = other.Size;
+
+            if(this->data!=nullptr){
+                delete[] this->data;
+            }
+
+            this->data = new int[other.Size];
+
+            for (int i = 0; i < other.Size; i++) {
+                this->data[i] = other.data[i];
+            }
+
+            return *this;
+        }
+
+
 
         ~Myclass() {
             cout << "destructor was called" << this << endl;
@@ -591,8 +611,10 @@ void Foo(Myclass value) {
 int main() {
 
     Myclass a(6);
-    Myclass b(a);
+    Myclass b(3);
+    Myclass c(2);
 
+    c = b = a;
    
 
     
