@@ -665,8 +665,9 @@ class Point {
         int getY() {
             return y;
         }
-        void setX(int x) {
+        void setX(int x) {                  
             this->x = x;
+
 
         }void setY(int y) {
             this->y = y;
@@ -692,6 +693,7 @@ int main() {
     Point a(5, 6);
     Point b(6, 8);
     Point c = a + b;
+
 
     // bool result = a > b;
 
