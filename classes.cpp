@@ -658,6 +658,13 @@ class Point {
             return temp;
         }
 
+        Point & operator ++() {
+            this-> x++;
+            this->y +=1;
+
+            return *this;
+        }
+
 
         int getX() {
             return x;
@@ -684,20 +691,11 @@ void Foo(Myclass value) {
 
 int main() {
 
-    // Myclass a(6);
-    // Myclass b(3);
-    // Myclass c(2);
-
-    // c = b = a;
-   
     Point a(5, 6);
-    Point b(6, 8);
-    Point c = a + b;
+    // Point b(6, 8);
+    ++a;
+    cout << a.getX() << " " << a.getY() << endl;
 
-
-    // bool result = a > b;
-
-    // cout << result << endl;
 
 
 
