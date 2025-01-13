@@ -649,7 +649,7 @@ class Point {
             return this->x <= other.x && this->y <= other.y;
         }
 
-        
+
         int getX() {
             return x;
         }
@@ -685,6 +685,7 @@ int main() {
     bool result = a > b;
 
     cout << result << endl;
+
 
     return 0;
 }
