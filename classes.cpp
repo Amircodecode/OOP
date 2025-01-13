@@ -697,14 +697,24 @@ void Foo(Myclass value) {
 }
 
 
+class Test {
+    public:
+        int &operator[](int index) {
+            return arr[index];
+        }
+    private:
+        int arr[5] = {12,34,54,67,78};
+};
+
 int main() {
 
-    Point a(5, 6);
+    // Point a(5, 6);
     // Point b(6, 8);
     // ++a;
-    // cout << a.getX() << " " << a.getY() << endl;
-    Point b = a++;
+    // Point b = a++;
     // cout << b.getX();
+    Test a;
+    cout << a[0];
 
 
 
