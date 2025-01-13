@@ -605,6 +605,38 @@ class Myclass {
             int Size;
 };
 
+class Point {
+    private:
+        int x;
+        int y;
+
+    public:
+        Point() {
+            x = 0;
+            y = 0;
+            cout << "constructor was colled " << this << endl;
+        }
+        Point(int x, int y) {
+            this->x = x;
+            this->y = y;
+            cout << "constructor was colled " << this << endl;
+        }
+
+        int getX() {
+            return x;
+        }
+        int getY() {
+            return y;
+        }
+        void setX(int x) {
+            this->x = x;
+
+        }void setY(int y) {
+            this->y = y;
+        }
+};
+
+
 void Foo(Myclass value) {
     cout << "the function foo was called" << endl;
 }
@@ -612,13 +644,14 @@ void Foo(Myclass value) {
 
 int main() {
 
-    Myclass a(6);
-    Myclass b(3);
-    Myclass c(2);
+    // Myclass a(6);
+    // Myclass b(3);
+    // Myclass c(2);
 
-    c = b = a;
+    // c = b = a;
    
-
+    Point a(5, 6);
+    Point b(6, 8);
     
 
     return 0;
