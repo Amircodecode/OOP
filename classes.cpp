@@ -661,10 +661,18 @@ class Point {
         Point & operator ++() {
             this-> x++;
             this->y +=1;
-
+ 
             return *this;
         }
 
+        Point & operator ++(int value) {
+            cout << "the constructor ++ was called " << endl;
+            Point temp(*this);
+            this -> x++;
+            this -> y++;
+
+            return temp;
+        }
 
         int getX() {
             return x;
@@ -693,9 +701,10 @@ int main() {
 
     Point a(5, 6);
     // Point b(6, 8);
-    ++a;
-    cout << a.getX() << " " << a.getY() << endl;
-
+    // ++a;
+    // cout << a.getX() << " " << a.getY() << endl;
+    Point b = a++;
+    // cout << b.getX();
 
 
 
