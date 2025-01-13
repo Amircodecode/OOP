@@ -626,6 +626,9 @@ class Point {
 
         bool operator == (const Point & other) {
             return this->x == other.x && this->y == other.y;
+
+        } bool operator != (const Point & other) {
+            return !(this->x == other.x && this->y == other.y);
         }
 
 
@@ -661,7 +664,8 @@ int main() {
    
     Point a(5, 6);
     Point b(6, 8);
-    bool result = a==b;
+    bool result = a!=b;
+
     cout << result << endl;
 
     return 0;
