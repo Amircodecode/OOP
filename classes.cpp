@@ -605,6 +605,8 @@ class Myclass {
             int Size;
 };
 
+
+
 class Point {
     private:
         int x;
