@@ -16,7 +16,7 @@ class Myclass {
         void PrintArr() {
             cout << "the array consist of " << Size << " elements " << endl;
             for (int i = 0; i < Size; i++) {
-                cout << arr[i] << endl;
+                cout << "the " << i + 1 << " element is: " << arr[i] << endl;
             }
         }
 
@@ -25,6 +25,7 @@ class Myclass {
             delete[] arr;
             cout << "the array was cleared" << endl;
         }
+
     private:
         int *arr;
         int Size;
@@ -38,20 +39,26 @@ int main() {
     cout << "enter the size: ";
     cin >> size;
     Myclass arr1(size);
-        
+    bool stop = false;
     int operation;
     do {
         cout << "You can " << endl <<
-                "1. modify the arr" << endl <<
+                "1. print the array" << endl <<
                 "2. modify the arr" << endl << 
                 "if you want to exit enter 0" << endl;
         cout << ">";
         cin >> operation;
-    
-        // cout << operation << endl;
+        if (operation == 0) {
+            stop == true;
+        }
+
+        if (operation == 1) {
+            arr1.PrintArr();
+        }
+
             
 
-    } while(operation <= 0);
+    } while((stop == true));
 
   
     
