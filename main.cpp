@@ -48,6 +48,7 @@ public:
         for (int i = 0; i < index; ++i) {
             temp[i] = arr[i]; 
         }
+
         for (int i = index; i < size - 1; ++i) {
             temp[i] = arr[i + 1]; 
         }
