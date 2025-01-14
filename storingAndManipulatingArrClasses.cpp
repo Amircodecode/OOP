@@ -1,9 +1,9 @@
 #include <iostream>
 using namespace std;
 
-class Myclass {
+class ArrClass {
     public:
-        Myclass(int size) {
+        ArrClass(int size) {
             this->Size = size;
             this->arr = new int[size];
             cout << "enter " << size << " elements " << endl;
@@ -20,7 +20,15 @@ class Myclass {
             }
         }
 
-        ~Myclass() {
+        void changeNum(int index, int changedNum) {
+            index = index - 1;
+            if (index >= 0 && index <= Size) {
+                arr[index] = changedNum;
+            }
+
+
+        }
+        ~ArrClass() {
             cout << "the destructor was called " << this << endl;
             delete[] arr;
             cout << "the array was cleared" << endl;
@@ -38,13 +46,13 @@ int main() {
     int size;
     cout << "enter the size: ";
     cin >> size;
-    Myclass arr1(size);
+    ArrClass arr1(size);
     bool stop = false;
     int operation;
     do {
         cout << "You can " << endl <<
                 "1. print the array" << endl <<
-                "2. modify the arr" << endl << 
+                "2. change the number" << endl << 
                 "if you want to exit enter 0" << endl;
         cout << ">";
         cin >> operation;
@@ -56,6 +64,16 @@ int main() {
             arr1.PrintArr();
         }
 
+        if (operation == 2) {
+            arr1.PrintArr();
+            int index;
+            cout << "which eleent you want to change: ";
+            cin >> index;
+            int changedNum;
+            cout << "to what number ? ";
+            cin >> changedNum;
+            arr1.changeNum(index, changedNum);
+        }
             
 
     } while((stop == true));
