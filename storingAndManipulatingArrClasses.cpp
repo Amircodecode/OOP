@@ -11,9 +11,6 @@ class Myclass {
                 cout << "enter " << i + 1 << " number: ";
                 cin >> arr[i];
             }
-            for(int i = 0; i < size; i++) {
-                cout << arr[i] << endl;
-            }
         }
 
         void PrintArr() {
@@ -41,17 +38,23 @@ int main() {
     cout << "enter the size: ";
     cin >> size;
     Myclass arr1(size);
+        
     int operation;
     do {
-        cout << "you can " << endl <<
+        cout << "You can " << endl <<
                 "1. modify the arr" << endl <<
                 "2. modify the arr" << endl << 
                 "if you want to exit enter 0" << endl;
         cout << ">";
         cin >> operation;
+    
+        // cout << operation << endl;
             
 
-    } while(operation == 0);
+    } while(operation <= 0);
+
+  
+    
 
     return 0;
 }
