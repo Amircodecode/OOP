@@ -541,212 +541,212 @@ using namespace std;
 // }
 
 
-class Myclass {
-    public:
+// class Myclass {
+//     public:
 
-        Myclass(int size) {
-            this-> Size = size;
-            this->data = new int[size];
+//         Myclass(int size) {
+//             this-> Size = size;
+//             this->data = new int[size];
 
-            for (int i = 0; i < size; i++) {
-                data[i] = i;
-            }
-            cout << "consructor was called"<< this << endl;
-        }
+//             for (int i = 0; i < size; i++) {
+//                 data[i] = i;
+//             }
+//             cout << "consructor was called"<< this << endl;
+//         }
 
-        Myclass(const Myclass &other) {
+//         Myclass(const Myclass &other) {
 
-            this -> Size = other.Size;
+//             this -> Size = other.Size;
             
-            this->data = new int[other.Size];
+//             this->data = new int[other.Size];
 
-            for (int i = 0; i < other.Size; i++) {
+//             for (int i = 0; i < other.Size; i++) {
 
-                this->data[i] = other.data[i];
+//                 this->data[i] = other.data[i];
                 
-            }
-            cout << "the copy constructor was called" << this << endl;
-        }
+//             }
+//             cout << "the copy constructor was called" << this << endl;
+//         }
 
-        Myclass & operator = (const Myclass & other) {
+//         Myclass & operator = (const Myclass & other) {
 
-            cout << "the function = was called" << this << endl;
+//             cout << "the function = was called" << this << endl;
 
-            this-> Size = other.Size;
+//             this-> Size = other.Size;
 
-            if(this->data!=nullptr){
-                delete[] this->data;
-            }
+//             if(this->data!=nullptr){
+//                 delete[] this->data;
+//             }
 
-            this->data = new int[other.Size];
+//             this->data = new int[other.Size];
 
-            for (int i = 0; i < other.Size; i++) {
+//             for (int i = 0; i < other.Size; i++) {
 
-                this->data[i] = other.data[i];
+//                 this->data[i] = other.data[i];
                 
-            }
+//             }
 
-            return *this;
-        }
-
-
-
-        ~Myclass() {
-            cout << "destructor was called" << this << endl;
-            delete[] data;
-        }
-
-        void Print() {
-            cout << this->data << endl;
-        }
-
-        private: 
-            int *data;
-            int Size;
-};
+//             return *this;
+//         }
 
 
-class Test;
 
-class Point {
-    private:
-        int x;
-        int y;
+//         ~Myclass() {
+//             cout << "destructor was called" << this << endl;
+//             delete[] data;
+//         }
 
-    public:
-        Point() {
-            x = 0;
-            y = 0;
-            cout << "constructor was colled " << this << endl;
-        }
-        Point(int x, int y) {
-            this->x = x;
-            this->y = y;
-            cout << "constructor was colled " << this << endl;
-        }
+//         void Print() {
+//             cout << this->data << endl;
+//         }
 
-        bool operator == (const Point & other) {
-            return this->x == other.x && this->y == other.y;
-        } 
-
-        bool operator != (const Point & other) {
-            return !(this->x == other.x && this->y == other.y);
-        }
-
-        bool operator > (const Point & other) {
-            return this->x > other.x && this->y > other.y;
-        }
-
-        bool operator < (const Point & other) {
-            return this->x < other.x && this->y < other.y;
-        }
+//         private: 
+//             int *data;
+//             int Size;
+// };
 
 
-        bool operator >= (const Point & other) {
-            return this->x >= other.x && this->y >= other.y;
-        }
+// class Test;
 
-        bool operator <= (const Point & other) {
-            return this->x <= other.x && this->y <= other.y;
-        }
+// class Point {
+//     private:
+//         int x;
+//         int y;
+
+//     public:
+//         Point() {
+//             x = 0;
+//             y = 0;
+//             cout << "constructor was colled " << this << endl;
+//         }
+//         Point(int x, int y) {
+//             this->x = x;
+//             this->y = y;
+//             cout << "constructor was colled " << this << endl;
+//         }
+
+//         bool operator == (const Point & other) {
+//             return this->x == other.x && this->y == other.y;
+//         } 
+
+//         bool operator != (const Point & other) {
+//             return !(this->x == other.x && this->y == other.y);
+//         }
+
+//         bool operator > (const Point & other) {
+//             return this->x > other.x && this->y > other.y;
+//         }
+
+//         bool operator < (const Point & other) {
+//             return this->x < other.x && this->y < other.y;
+//         }
 
 
-        Point operator +(const Point & other) {
-            cout << "the operator + was colled " << this <<  endl;
-            Point temp;
-            temp.x = this->x + other.x;
-            temp.y = this->y + other.y;
-            return temp;
-        }
+//         bool operator >= (const Point & other) {
+//             return this->x >= other.x && this->y >= other.y;
+//         }
 
-        Point & operator ++() {
-            this-> x++;
-            this->y +=1;
+//         bool operator <= (const Point & other) {
+//             return this->x <= other.x && this->y <= other.y;
+//         }
+
+
+//         Point operator +(const Point & other) {
+//             cout << "the operator + was colled " << this <<  endl;
+//             Point temp;
+//             temp.x = this->x + other.x;
+//             temp.y = this->y + other.y;
+//             return temp;
+//         }
+
+//         Point & operator ++() {
+//             this-> x++;
+//             this->y +=1;
  
-            return *this;
-        }
+//             return *this;
+//         }
 
-        Point & operator ++(int value) {
-            cout << "the constructor ++ was called " << endl;
-            Point temp(*this);
+//         Point & operator ++(int value) {
+//             cout << "the constructor ++ was called " << endl;
+//             Point temp(*this);
 
-            this -> x++;
-            this -> y++;
-
-
-            return temp;
-        }
-
-        int getX() {
-            return x;
-        }
-        int getY() {
-            return y;
-        }
-        void setX(int x) {                  
-            this->x = x;
+//             this -> x++;
+//             this -> y++;
 
 
-        }void setY(int y) {
-            this->y = y;
-        } 
+//             return temp;
+//         }
 
-        void Print() {
-            cout << "x = " << x << " y = " << y << endl;
-        }
-
-       friend void GetX(Point &value, Test &value1);
-
-
-};
-
-
-void Foo(Myclass value) {
-    cout << "the function foo was called" << endl;
-}
+//         int getX() {
+//             return x;
+//         }
+//         int getY() {
+//             return y;
+//         }
+//         void setX(int x) {                  
+//             this->x = x;
 
 
-class Test {
-    friend void GetX(Point &value, Test &value1);
-    private:
-        int data = 0;
+//         }void setY(int y) {
+//             this->y = y;
+//         } 
 
-    public:
-        void Print() {
-            cout << "data = " << data << endl;
-        }
-};
+//         void Print() {
+//             cout << "x = " << x << " y = " << y << endl;
+//         }
+
+//        friend void GetX(Point &value, Test &value1);
 
 
-void GetX(Point &value, Test &value1) {
-    value.x = 12;
-    value1.data = 67;
-}
+// };
 
-class classes
-{
-private:
-    /* data */
-public:
-    classes(/* args */);
-    ~classes();
-    void Print();
-};
 
-classes::classes(/* args */)
-{
-}
+// void Foo(Myclass value) {
+//     cout << "the function foo was called" << endl;
+// }
 
-classes::~classes()
-{
-}
 
-void classes::Print()
-{
-    cout << "hello world " << endl;
-}
+// class Test {
+//     friend void GetX(Point &value, Test &value1);
+//     private:
+//         int data = 0;
 
-int main() {
+//     public:
+//         void Print() {
+//             cout << "data = " << data << endl;
+//         }
+// };
+
+
+// void GetX(Point &value, Test &value1) {
+//     value.x = 12;
+//     value1.data = 67;
+// }
+
+// class classes
+// {
+// private:
+//     /* data */
+// public:
+//     classes(/* args */);
+//     ~classes();
+//     void Print();
+// };
+
+// classes::classes(/* args */)
+// {
+// }
+
+// classes::~classes()
+// {
+// }
+
+// void classes::Print()
+// {
+//     cout << "hello world " << endl;
+// }
+
+// int main() {
 
     // Point a(5, 6);
     // Point b(6, 8);
@@ -765,10 +765,50 @@ int main() {
     // a.Print();
     // b.Print();
 
-    classes a;
-    a.Print();
+    // classes a;
+    // a.Print();
 
 
 
+//     return 0;
+// }
+
+class Human;
+class Apple;
+
+class Human {
+    public:
+        void TakeApple(Apple & apple);
+                
+};
+
+
+
+class Apple {
+    public:
+        Apple(int weight, string color) {
+            this-> weight = weight;
+            this-> color = color;
+        }
+
+    friend void Human::TakeApple(Apple & apple);
+
+    private:
+        int weight;
+        string color;
+
+};
+
+
+int main() {
+
+    Apple apple(12, "red");
+
+    Human human;
+    human.TakeApple(apple);
     return 0;
+}
+
+void Human::TakeApple(Apple & apple) {
+    cout << "take apple the apple weight " << apple.weight << " the apple color " << apple.color << endl;
 }
