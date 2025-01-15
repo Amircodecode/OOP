@@ -606,6 +606,7 @@ class Myclass {
 };
 
 
+class Test;
 
 class Point {
     private:
@@ -690,6 +691,12 @@ class Point {
             this->y = y;
         } 
 
+        void Print() {
+            cout << "x = " << x << " y = " << y << endl;
+        }
+
+       friend void GetX(Point &value, Test &value1);
+
 
 };
 
@@ -700,13 +707,44 @@ void Foo(Myclass value) {
 
 
 class Test {
-    public:
-        int &operator[](int index) {
-            return arr[index];
-        }
+    friend void GetX(Point &value, Test &value1);
     private:
-        int arr[5] = {12,34,54,67,78};
+        int data = 0;
+
+    public:
+        void Print() {
+            cout << "data = " << data << endl;
+        }
 };
+
+
+void GetX(Point &value, Test &value1) {
+    value.x = 12;
+    value1.data = 67;
+}
+
+class classes
+{
+private:
+    /* data */
+public:
+    classes(/* args */);
+    ~classes();
+    void Print();
+};
+
+classes::classes(/* args */)
+{
+}
+
+classes::~classes()
+{
+}
+
+void classes::Print()
+{
+    cout << "hello world " << endl;
+}
 
 int main() {
 
@@ -718,7 +756,17 @@ int main() {
     // Test a;
     // cout << a[0];
 
-    Point a;
+    // Point a;
+
+    // Point a(6, 9);
+    // Test b;
+    // // a.Print();   
+    // GetX(a, b);
+    // a.Print();
+    // b.Print();
+
+    classes a;
+    a.Print();
 
 
 
