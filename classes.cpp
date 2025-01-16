@@ -799,6 +799,10 @@ class Apple {
 
 };
 
+void Human::TakeApple(Apple & apple) {
+    cout << "take apple the apple weight " << apple.weight << " the apple color " << apple.color << endl;
+}
+
 
 int main() {
 
@@ -809,6 +813,3 @@ int main() {
     return 0;
 }
 
-void Human::TakeApple(Apple & apple) {
-    cout << "take apple the apple weight " << apple.weight << " the apple color " << apple.color << endl;
-}
