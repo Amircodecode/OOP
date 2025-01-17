@@ -823,17 +823,23 @@ class Apple {
             this-> color = color;
         }
 
-    void Print() {
-        
-    }
+        void Print() {
+            cout << "weight = " << weight << " color = " << color << endl;
+        }
     private: 
         int weight;
         string color;
 }; 
 
+class Human {
+    void PrintTest(Apple & apple);
+
+};
+
+
 int main() {
     Apple apple(120, "red");
-
+    apple.Print();
 
 
     return 0;
