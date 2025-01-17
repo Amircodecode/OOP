@@ -823,7 +823,7 @@ class Human {
 
 class Apple {
     public: 
-        friend void Human::PrintTest(Apple & apple);
+        friend Human;
 
         Apple(int weight, string color) {
             this-> weight = weight;
@@ -846,6 +846,6 @@ int main() {
     Apple apple(120, "red");
     Human human;
     human.PrintTest(apple);
-
+  
     return 0;
 }
