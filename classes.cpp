@@ -773,43 +773,43 @@ using namespace std;
 //     return 0;
 // }
 
-class Human;
-class Apple;
+// class Human;
+// class Apple;
 
-class Human {
-    public:
-        void TakeApple(Apple & apple);
+// class Human {
+//     public:
+//         void TakeApple(Apple & apple);
                 
-};
+// };
 
 
 
-class Apple {
-    public:
-        Apple(int weight, string color) {
-            this-> weight = weight;
-            this-> color = color;
-        }
+// class Apple {
+//     public:
+//         Apple(int weight, string color) {
+//             this-> weight = weight;
+//             this-> color = color;
+//         }
 
-    friend void Human::TakeApple(Apple & apple);
+//     friend void Human::TakeApple(Apple & apple);
 
-    private:
-        int weight;
-        string color;
+//     private:
+//         int weight;
+//         string color;
 
-};
+// };
 
-void Human::TakeApple(Apple & apple) {
-    cout << "take apple the apple weight " << apple.weight << " the apple color " << apple.color << endl;
-}
+// void Human::TakeApple(Apple & apple) {
+//     cout << "take apple the apple weight " << apple.weight << " the apple color " << apple.color << endl;
+// }
 
 
-int main() {
+// int main() {
 
-    Apple apple(12, "red");
+//     Apple apple(12, "red");
 
-    Human human;
-    human.TakeApple(apple);
-    return 0;
-}
+//     Human human;
+//     human.TakeApple(apple);
+//     return 0;
+// }
 
