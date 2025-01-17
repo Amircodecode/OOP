@@ -813,3 +813,16 @@ using namespace std;
 //     return 0;
 // }
 
+class Human;
+class Apple;
+
+class Apple {
+    public: 
+        Apple(int weight, string color) {
+
+            
+        }
+    private: 
+        int weight;
+        string color;
+}; 
