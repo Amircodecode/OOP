@@ -823,13 +823,17 @@ class Apple {
             this-> color = color;
         }
 
+    void Print() {
+        
+    }
     private: 
         int weight;
         string color;
 }; 
 
 int main() {
-    
+    Apple apple(120, "red");
+
 
 
     return 0;
