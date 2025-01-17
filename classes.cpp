@@ -819,10 +819,18 @@ class Apple;
 class Apple {
     public: 
         Apple(int weight, string color) {
-
-            
+            this-> weight = weight;
+            this-> color = color;
         }
+
     private: 
         int weight;
         string color;
 }; 
+
+int main() {
+    
+
+
+    return 0;
+}
