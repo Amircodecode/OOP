@@ -816,8 +816,15 @@ using namespace std;
 class Human;
 class Apple;
 
+class Human {
+    public:
+        void PrintTest(Apple & apple);
+};
+
 class Apple {
     public: 
+        friend void Human::PrintTest(Apple & apple);
+
         Apple(int weight, string color) {
             this-> weight = weight;
             this-> color = color;
@@ -831,16 +838,14 @@ class Apple {
         string color;
 }; 
 
-class Human {
-    void PrintTest(Apple & apple);
-
-};
-
+void Human::PrintTest(Apple & apple) {
+    cout << "weight = " << apple.weight << " color = " << apple.color << endl;
+}
 
 int main() {
     Apple apple(120, "red");
-    apple.Print();
-
+    Human human;
+    human.PrintTest(apple);
 
     return 0;
 }
