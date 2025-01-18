@@ -885,3 +885,33 @@ using namespace std;
 //     return 0;
 // }
 
+class Image {
+    public:
+
+
+
+    private:
+        class Pixel {
+            public:
+                static const int size = 5;
+                Pixel(int r, int g, int b) {
+                    this-> r = r;
+                    this-> g = g;
+                    this-> b = b;
+                }
+
+                string GetInfo() {
+                    cout << "r = " << to_string(r) << " g = " << to_string(g) << " b = " << to_string(b) << endl;
+                }
+            private:
+              
+                int r;
+                int g;
+                int b;
+        };
+};
+
+int main() {
+
+    return 0;
+}
