@@ -850,3 +850,16 @@ using namespace std;
 //     return 0;
 // }
 
+class Apple {
+    public:
+        static int count;
+        Apple(int weight, string color) {
+            this-> weight = weight;
+            this-> color = color;
+        }
+    private:
+        int weight;
+        string color;
+};
+
+int Apple::count = 0;
