@@ -856,6 +856,7 @@ class Apple {
         Apple(int weight, string color) {
             this-> weight = weight;
             this-> color = color;
+            count++;
         }
     private:
         int weight;
@@ -866,6 +867,7 @@ int Apple::count = 0;
 
 int main() {
     Apple apple(15, "red");
-        
+    Apple apple2(29, "yellow");
+    cout << Apple::count << endl;
     return 0;
 }
