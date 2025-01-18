@@ -850,24 +850,32 @@ using namespace std;
 //     return 0;
 // }
 
-class Apple {
-    public:
-        static int count;
-        Apple(int weight, string color) {
-            this-> weight = weight;
-            this-> color = color;
-            count++;
-        }
-    private:
-        int weight;
-        string color;
-};
+// class Apple {
+//     public:
+//         static int count;
+//         Apple(int weight, string color) {
+//             this-> weight = weight;
+//             this-> color = color;
+//             count++;    
+//         }
+//     private:
+//         int weight;
+//         string color;
+// };
 
-int Apple::count = 0;
+// int Apple::count = 0;
+
+// int main() {
+//     Apple apple(15, "red");
+//     Apple apple2(29, "yellow");
+//     cout << Apple::count << endl;
+//     return 0;
+// }
 
 int main() {
-    Apple apple(15, "red");
-    Apple apple2(29, "yellow");
-    cout << Apple::count << endl;
+
+
+
+    
     return 0;
 }
