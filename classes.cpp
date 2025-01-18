@@ -863,3 +863,9 @@ class Apple {
 };
 
 int Apple::count = 0;
+
+int main() {
+    Apple apple(15, "red");
+        
+    return 0;
+}
