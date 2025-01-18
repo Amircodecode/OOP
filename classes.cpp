@@ -887,10 +887,14 @@ using namespace std;
 
 class Image {
     public:
+        void GetImageInfo() {
+            for (int i = 0; i < 4; i++) {
+                cout << "#" << i << pixels[i].GetInfo() << endl;
+            }
+        }
 
 
 
-    private:
         class Pixel {
             public:
                 static const int size = 5;
@@ -901,7 +905,7 @@ class Image {
                 }
 
                 string GetInfo() {
-                    cout << "r = " << to_string(r) << " g = " << to_string(g) << " b = " << to_string(b) << endl;
+                    return " r = " + to_string(r) + " g = " + to_string(g) + " b = " + to_string(b);
                 }
             private:
               
@@ -909,9 +913,21 @@ class Image {
                 int g;
                 int b;
         };
+    private:
+        Pixel pixels[4] {
+            Pixel(0, 4, 3),
+            Pixel(5, 6, 7),
+            Pixel(3, 5, 7),
+            Pixel(12, 45, 65)
+        };
+
 };
 
 int main() {
+    // Image image;
+    // image.GetImageInfo();
 
+    Image::Pixel pixel(12, 34, 56);
+    cout << pixel.GetInfo();
     return 0;
 }
