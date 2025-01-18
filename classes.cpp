@@ -813,39 +813,40 @@ using namespace std;
 //     return 0;
 // }
 
-class Human;
-class Apple;
+// class Human;
+// class Apple;
 
-class Human {
-    public:
-        void PrintTest(Apple & apple);
-};
+// class Human {
+//     public:
+//         void PrintTest(Apple & apple);
+// };
 
-class Apple {
-    public: 
-        friend Human;
+// class Apple {
+//     public: 
+//         friend Human;
 
-        Apple(int weight, string color) {
-            this-> weight = weight;
-            this-> color = color;
-        }
+//         Apple(int weight, string color) {
+//             this-> weight = weight;
+//             this-> color = color;
+//         }
 
-        void Print() {
-            cout << "weight = " << weight << " color = " << color << endl;
-        }
-    private: 
-        int weight;
-        string color;
-}; 
+//         void Print() {
+//             cout << "weight = " << weight << " color = " << color << endl;
+//         }
+//     private: 
+//         int weight;
+//         string color;
+// }; 
 
-void Human::PrintTest(Apple & apple) {
-    cout << "weight = " << apple.weight << " color = " << apple.color << endl;
-}
+// void Human::PrintTest(Apple & apple) {
+//     cout << "weight = " << apple.weight << " color = " << apple.color << endl;
+// }
 
-int main() {
-    Apple apple(120, "red");
-    Human human;
-    human.PrintTest(apple);
+// int main() {
+//     Apple apple(120, "red");
+//     Human human;
+//     human.PrintTest(apple);
   
-    return 0;
-}
+//     return 0;
+// }
+
