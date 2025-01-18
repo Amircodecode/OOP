@@ -885,49 +885,59 @@ using namespace std;
 //     return 0;
 // }
 
-class Image {
-    public:
-        void GetImageInfo() {
-            for (int i = 0; i < 4; i++) {
-                cout << "#" << i << pixels[i].GetInfo() << endl;
-            }
-        }
+// class Image {
+//     public:
+//         void GetImageInfo() {
+//             for (int i = 0; i < 4; i++) {
+//                 cout << "#" << i << pixels[i].GetInfo() << endl;
+//             }
+//         }
 
+            // class Pixel {
+            //     public:
+            //         static const int size = 5;
+            //         Pixel() {
+            //             r = g = b = 0;
+            //         }
+            //         Pixel(int r, int g, int b) {
+            //             this-> r = r;
+            //             this-> g = g;
+            //             this-> b = b;
+            //         }
+            //         string GetInfo() {
+            //             return " r = " + to_string(r) + " g = " + to_string(g) + " b = " + to_string(b);
+            //         }
+            //     private:
+                
+            //         int r;
+            //         int g;
+            //         int b;
+            // };
 
+    
+//     private:
+//         Pixel pixels[4] {
+//             Pixel(0, 4, 3),
+//             Pixel(5, 6, 7),
+//             Pixel(3, 5, 7),
+//             Pixel(12, 45, 65)
+//         };
 
-        class Pixel {
-            public:
-                static const int size = 5;
-                Pixel(int r, int g, int b) {
-                    this-> r = r;
-                    this-> g = g;
-                    this-> b = b;
-                }
+// };
 
-                string GetInfo() {
-                    return " r = " + to_string(r) + " g = " + to_string(g) + " b = " + to_string(b);
-                }
-            private:
-              
-                int r;
-                int g;
-                int b;
-        };
-    private:
-        Pixel pixels[4] {
-            Pixel(0, 4, 3),
-            Pixel(5, 6, 7),
-            Pixel(3, 5, 7),
-            Pixel(12, 45, 65)
-        };
-
-};
 
 int main() {
     // Image image;
     // image.GetImageInfo();
 
-    Image::Pixel pixel(12, 34, 56);
-    cout << pixel.GetInfo();
+    // Image::Pixel pixel(12, 34, 56);
+    // cout << pixel.GetInfo();
+    // int length = 5;
+    // Pixel *arr = new Pixel[length];
+
+    // arr[0] = Pixel(23, 23, 45);
+    // cout << arr[0].GetInfo() << endl;
+
+    
     return 0;
 }
