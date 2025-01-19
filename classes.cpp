@@ -997,14 +997,23 @@ using namespace std;
 
 
 
-
 class Human {
     public:
-        string GetName() {
-            return name;
+        // Human(string name, int age) {
+        //     this-> name = name;
+        //     this-> age = age;
+        // };
+        void GetName() {
+            cout << "the name is " << name << endl;
         }
         void setName(string name) {
             this-> name = name;
+        }
+        void GetAge() {
+            cout << "the age is " << age << endl;
+        }
+        void setAge(int age) {
+            this-> age = age;
         }
     private:
         string name;
@@ -1036,7 +1045,13 @@ class Student2 : public Student {
 
 int main() {
 
-
+    Student st;
+    st.setName("amir nazarov");
+    st.GetName();
+    Student2 st2;
+    st2.setAge(23);
+    st2.GetAge();
+    
 
     return 0;
 }
