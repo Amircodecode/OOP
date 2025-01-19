@@ -985,10 +985,26 @@ using namespace std;
 // }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 class Human {
     public:
         string GetName() {
             return name;
+        }
+        void setName(string name) {
+            this-> name = name;
         }
     private:
         string name;
@@ -996,7 +1012,26 @@ class Human {
 };
 
 class Student : public Human {
-    
+    public:
+        void setGroup(string group) {
+            this->group = group;
+        }
+        string getGroup() {
+            return group;
+        }   
+    private:
+        string group;
+
+};
+
+class Student2 : public Student {
+    public:
+        void message() {
+            cout << "i learn more rare than the usual student " << endl;
+        }
+    private:
+        string group;
+
 };
 
 int main() {
