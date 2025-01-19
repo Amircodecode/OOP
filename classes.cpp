@@ -997,63 +997,64 @@ using namespace std;
 
 
 
-class Human {
-    public:
-        // Human(string name, int age) {
-        //     this-> name = name;
-        //     this-> age = age;
-        // };
-        void GetName() {
-            cout << "the name is " << name << endl;
-        }
-        void setName(string name) {
-            this-> name = name;
-        }
-        void GetAge() {
-            cout << "the age is " << age << endl;
-        }
-        void setAge(int age) {
-            this-> age = age;
-        }
-    private:
-        string name;
-        int age;
-};
+// class Human {
+//     public:
+//         // Human(string name, int age) {
+//         //     this-> name = name;
+//         //     this-> age = age;
+//         // };
+//         void GetName() {
+//             cout << "the name is " << name << endl;
+//         }
+//         void setName(string name) {
+//             this-> name = name;
+//         }
+//         void GetAge() {
+//             cout << "the age is " << age << endl;
+//         }
+//         void setAge(int age) {
+//             this-> age = age;
+//         }
+//     private:
+//         string name;
+//         int age;
+// };
 
-class Student : public Human {
-    public:
-        void setGroup(string group) {
-            this->group = group;
-        }
-        string getGroup() {
-            return group;
-        }   
-    private:
-        string group;
+// class Student : public Human {
+//     public:
+//         void setGroup(string group) {
+//             this->group = group;
+//         }
+//         string getGroup() {
+//             return group;
+//         }   
+//     private:
+//         string group;
 
-};
+// };
 
-class Student2 : public Student {
-    public:
-        void message() {
-            cout << "i learn more rare than the usual student " << endl;
-        }
-    private:
-        string group;
+// class Student2 : public Student {
+//     public:
+//         void message() {
+//             cout << "i learn more rare than the usual student " << endl;
+//         }
+//     private:
+//         string group;
 
-};
+// };
 
-int main() {
+// int main() {
 
-    Student st;
-    st.setName("amir nazarov");
-    st.GetName();
-    Student2 st2;
-    st2.setAge(23);
-    st2.GetAge();
+//     Student st;
+//     st.setName("amir nazarov");
+//     st.GetName();
+//     Student2 st2;
+//     st2.setAge(23);
+//     st2.GetAge();
     
 
-    return 0;
-}
+//     return 0;
+// }
+
 
 
