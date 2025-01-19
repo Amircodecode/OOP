@@ -942,11 +942,44 @@ using namespace std;
     // return 0;
 // }
 
+class Cup {
+    public:
+        string GetColor() {
+            return color;
+        }
+    private:
+        string color = "red";
+};
+
+class Human {
+    public:
+        void thinking() {
+            brain.realThinking();
+        }
+
+        void InspectBrain() {
+            cout << "my cup is " << cup.GetColor() << " color " << endl;
+        }
     
+    private:
+        class Brain {
+            public:
+                void realThinking() {
+                    cout << "i am thinking " << endl;
+                }
+
+        };
+
+        Brain brain;
+        Cup cup;
+};
 
 int main() {
+    Human human;
+    human.thinking();
+
+    human.InspectBrain();
 
 
-    
     return 0;
 }
