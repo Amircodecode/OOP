@@ -926,7 +926,7 @@ using namespace std;
 // };
 
 
-int main() {
+// int main() {
     // Image image;
     // image.GetImageInfo();
 
@@ -939,7 +939,14 @@ int main() {
     // cout << arr[0].GetInfo() << endl;
 
     
-    return 0;
-}
+    // return 0;
+// }
 
     
+
+int main() {
+
+
+    
+    return 0;
+}
