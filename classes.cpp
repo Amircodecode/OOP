@@ -985,3 +985,25 @@ using namespace std;
 // }
 
 
+class Human {
+    public:
+        string GetName() {
+            return name;
+        }
+    private:
+        string name;
+        int age;
+};
+
+class Student : public Human {
+    
+};
+
+int main() {
+
+
+
+    return 0;
+}
+
+
