@@ -1058,3 +1058,42 @@ using namespace std;
 
 
 
+class A {
+    // public:
+    //     string msgOne = "msg one";
+    // private: 
+    //     string msgTwo = "msg two";
+    // protected:
+    //     string msgThree = "msg three";
+    public:
+        A() {
+            cout << "a " << endl;
+        }
+
+
+    
+};
+
+class B : public A {
+    public:
+        // void returnMsgOne() {
+        //     cout << msgOne << endl;
+        // }
+
+        B() {
+            cout << "b " << endl;
+        }
+};
+
+class C : public B {
+    public: 
+    C() {
+        cout << "c " << endl;
+    }
+};
+
+int main() {
+    C c;
+
+    return 0;
+}
