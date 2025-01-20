@@ -1069,6 +1069,9 @@ class A {
         A() {
             cout << "a " << endl;
         }
+        ~A() {
+        cout << "a" << endl;
+    }
 
 
     
@@ -1083,6 +1086,9 @@ class B : public A {
         B() {
             cout << "b " << endl;
         }
+        ~B() {
+        cout << "b" << endl;
+    }
 };
 
 class C : public B {
@@ -1090,10 +1096,15 @@ class C : public B {
     C() {
         cout << "c " << endl;
     }
+    ~C() {
+        cout << "c" << endl;
+    }
 };
 
 int main() {
     C c;
+
+    cout << endl << endl;
 
     return 0;
 }
