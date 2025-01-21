@@ -1159,5 +1159,49 @@ using namespace std;
 //     return 0;
 // }
 
+class Gun {
+    public:
+        virtual void Shoot() {
+            cout << "bax bax" << endl;
+        }
+};
+
+class Pushka : public Gun{
+    public:
+        void Shoot() override {
+            cout << "shaha shaha" << endl;
+        }
+};
+
+class Bomba : public Gun {
+    public:
+        void Shoot() override {
+            cout << "aaaaaaaaaaaaaaaaaaa" << endl;
+        }
+};
 
 
+class User {
+    public:
+        void Shoot(Gun *gun) {
+            gun->Shoot();
+        }
+};
+
+
+int main() {
+
+    Bomba bomba;
+    Gun gun;
+    Pushka pushka;
+
+    User user;
+
+    user.Shoot(&bomba);
+    user.Shoot(&gun);
+    user.Shoot(&pushka);
+
+
+
+    return 0;
+}
