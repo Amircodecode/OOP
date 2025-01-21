@@ -1058,53 +1058,106 @@ using namespace std;
 
 
 
-class A {
-    // public:
-    //     string msgOne = "msg one";
-    // private: 
-    //     string msgTwo = "msg two";
-    // protected:
-    //     string msgThree = "msg three";
-    public:
-        A() {
-            cout << "a " << endl;
-        }
-        ~A() {
-        cout << "a" << endl;
-    }
+// class A {
+//     // public:
+//     //     string msgOne = "msg one";
+//     // private: 
+//     //     string msgTwo = "msg two";
+//     // protected:
+//     //     string msgThree = "msg three";
+//     public:
+//         A() {
+//             cout << "a " << endl;
+//         }
+//         ~A() {
+//         cout << "a" << endl;
+//     }
 
 
     
-};
+// };
 
-class B : public A {
-    public:
-        // void returnMsgOne() {
-        //     cout << msgOne << endl;
-        // }
+// class B : public A {
+//     public:
+//         // void returnMsgOne() {
+//         //     cout << msgOne << endl;
+//         // }
 
-        B() {
-            cout << "b " << endl;
-        }
-        ~B() {
-        cout << "b" << endl;
-    }
-};
+//         B() {
+//             cout << "b " << endl;
+//         }
+//         ~B() {
+//         cout << "b" << endl;
+//     }
+// };
 
-class C : public B {
-    public: 
-    C() {
-        cout << "c " << endl;
-    }
-    ~C() {
-        cout << "c" << endl;
-    }
-};
+// class C : public B {
+//     public: 
+//     C() {
+//         cout << "c " << endl;
+//     }
+//     ~C() {
+//         cout << "c" << endl;
+//     }
+// };
 
-int main() {
-    C c;
+// int main() {
+//     C c;
 
-    cout << endl << endl;
+//     cout << endl << endl;
 
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+
+// class A {
+//     public:
+//         A() {
+//             msg = "amir nazarov";
+//         }
+
+//         A(string msg) {
+//             this-> msg = msg;
+//         }
+
+//         A(string msg, int a) {
+//             this-> msg = msg;
+//             this-> age = a;
+
+//         }
+        
+//         void PringMsg() {
+//             cout << msg << " " << age << endl;
+            
+//         }
+
+//     private:
+//         string msg;
+//         int age = 18;
+
+// };
+
+// class B : public A {
+
+//     public:
+//     B():A("baxa", 20) {
+
+//     }
+
+//     private:
+
+
+// };
+// int main() {
+
+//     // B b;
+//     // b.PringMsg();
+
+
+//     return 0;
+// }
+
+
+
