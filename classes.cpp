@@ -1338,11 +1338,6 @@ using namespace std;
 
 
 
-
-
-
-
-
 class Msg {
     public:
         Msg(string msg) {
@@ -1352,36 +1347,47 @@ class Msg {
         virtual string GetMsg() {
             return msg;
         }
-
     private:
         string msg;
+
 };
 
 class Msg2 : public Msg {
+    public:
+        Msg2(string msg):Msg(msg) {}
+
+        string GetMsg() override {
+            return "6 " + ::Msg::GetMsg() + " 9";
+        }
+
+};
+
+class Msg3 : public Msg {
     public: 
-        Msg2(string msg):Msg(msg) {
+        Msg3(string msg):Msg(msg) {
 
         }
 
         string GetMsg() override {
-            return "{ " + ::Msg::GetMsg() + " }";
+            return "🥶 " + ::Msg::GetMsg() + " 🥶";
         }
 };
 
 class Printer {
-    public:
-        void Print(Msg *msg) {
+    public: 
+        void PrintMsg(Msg *msg) {
             cout << msg->GetMsg() << endl;
         }
 };
 
 
 int main() {
-    Msg2 m("hello");
 
+    Msg3 ms("amir");
     Printer p;
-    p.Print(&m);
-
-
+    p.PrintMsg(&ms);
     return 0;
 }
+
+
+
