@@ -1166,7 +1166,7 @@ class Gun {
         }
 };
 
-class Pushka : public Gun{
+class Pushka : public Gun {
     public:
         void Shoot() override {
             cout << "shaha shaha" << endl;
