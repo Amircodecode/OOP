@@ -1159,49 +1159,146 @@ using namespace std;
 //     return 0;
 // }
 
-class Gun {
-    public:
-        virtual void Shoot() {
-            cout << "bax bax" << endl;
-        }
-};
-
-class Pushka : public Gun {
-    public:
-        void Shoot() override {
-            cout << "shaha shaha" << endl;
-        }
-};
-
-class Bomba : public Gun {
-    public:
-        void Shoot() override {
-            cout << "aaaaaaaaaaaaaaaaaaa" << endl;
-        }
-};
-
-
-class User {
-    public:
-        void Shoot(Gun *gun) {
-            gun->Shoot();
-        }
-};
-
-
-int main() {
-
-    Bomba bomba;
-    Gun gun;
-    Pushka pushka;
-
-    User user;
-
-    user.Shoot(&bomba);
-    user.Shoot(&gun);
-    user.Shoot(&pushka);
 
 
 
-    return 0;
-}
+// class Gun {
+//     public:
+//         virtual void Shoot() {
+//             cout << "bax bax" << endl;
+//         }
+// };
+
+// class Pushka : public Gun {
+//     public:
+//         void Shoot() override {
+//             cout << "shaha shaha" << endl;
+//         }
+// };
+
+// class Bomba : public Gun {
+//     public:
+//         void Shoot() override {
+//             cout << "aaaaaaaaaaaaaaaaaaa" << endl;
+//         }
+// };
+
+
+// class User {
+//     public:
+//         void Shoot(Gun *gun) {
+//             gun->Shoot();
+//         }
+// };
+
+
+// int main() {
+
+//     Bomba bomba;
+//     Gun gun;
+//     Pushka pushka;
+
+//     User user;
+
+//     user.Shoot(&bomba);
+//     user.Shoot(&gun);
+//     user.Shoot(&pushka);
+
+
+
+//     return 0;
+// }
+
+
+
+
+
+
+// class Weapon {
+//     public:
+//         virtual void Shoot() = 0;
+// };
+// class Gun : public Weapon {
+//     public: 
+//         void Shoot() override {
+//             cout << "gun" << endl;
+//         }
+// };
+// class Pushka : public Gun {
+//     public:
+//         void Shoot() override {
+//             cout << "pushka pushka" << endl;
+//         }
+// };
+
+// class AK47 : public Gun {
+//     public:
+//         void Shoot() override {
+//             cout << "AK47" << endl;
+//         }
+// };
+
+// class Bobma : public Weapon {
+//     public:
+//         void Shoot() override {
+//             cout << "aaaaaaaaaaaaaaaaaa" << endl;
+//         }
+// };
+
+// class Player {
+//     public:
+//         void Shoot(Weapon *weapon) {
+//             weapon->Shoot();
+//         }
+// };
+
+
+// int main() {
+//     Gun gun;
+//     Pushka pushka;
+//     AK47 ak47;
+//     Bobma bomba;
+
+//     Player player;
+//     player.Shoot(&bomba);
+//     player.Shoot(&gun);
+//     player.Shoot(&pushka);
+//     player.Shoot(&ak47);
+
+
+
+//     return 0;
+// }
+
+
+// class A {
+//     public:
+//         A() {
+
+//         }
+
+//         virtual ~A() = 0;
+// };
+
+// A::~A() {};
+
+// class B : public A {
+//     public:
+//         B() {
+
+//         }
+
+//         ~B() override {
+
+//         }
+// };
+
+// int main() {
+//     A *bprt = new B;
+//     delete bprt;
+
+
+//     return 0;
+// }
+
+
