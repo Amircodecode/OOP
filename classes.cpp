@@ -1336,3 +1336,45 @@ using namespace std;
 //     return 0;
 // }
 
+class Msg {
+    public:
+        Msg(string msg) {
+            this->msg = msg;
+        }
+
+        virtual string GetMsg() {
+            return msg;
+        }
+
+    private:
+        string msg;
+};
+
+class Msg2 : public Msg {
+    public: 
+        Msg2(string msg):Msg(msg) {
+
+        }
+
+        string GetMsg() override {
+            return "{ " + ::Msg::GetMsg() + " }";
+        }
+};
+
+class Printer {
+    public:
+        void Print(Msg *msg) {
+            cout << msg->GetMsg() << endl;
+        }
+};
+
+
+int main() {
+    Msg2 m("hello");
+
+    Printer p;
+    p.Print(&m);
+
+
+    return 0;
+}
