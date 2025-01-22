@@ -1302,3 +1302,32 @@ using namespace std;
 // }
 
 
+class Human {
+    public:
+        Human(string name) {
+            this->name = age;
+            this->age = 0;
+            this->weight = 0;
+        }
+
+        Human(string name, int age):Human(name) {
+            this->age = age;
+        }
+
+        Human(string name, int age, int weight):Human(name,age) {
+            this->weight = weight;
+        }
+
+    private:
+        string name;
+        int age;
+        int weight;
+
+};
+int main() {
+    Human h("amir", 18, 75);
+
+
+
+    return 0;
+}
