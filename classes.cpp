@@ -1343,59 +1343,88 @@ using namespace std;
 
 
 
-class Msg {
+
+
+// class Msg {
+//     public:
+//         Msg(string msg) {
+//             this->msg = msg;
+//         }
+
+//         virtual string GetMsg() {
+//             return msg;
+//         }
+//     private:
+//         string msg;
+
+// };
+
+// class Msg2 : public Msg {
+//     public:
+//         Msg2(string msg):Msg(msg) {}
+
+//         string GetMsg() override {
+//             return "6 " + ::Msg::GetMsg() + " 9";
+//         }
+
+// };
+
+// class Msg3 : public Msg {
+//     public: 
+//         Msg3(string msg):Msg(msg) {
+
+//         }
+
+//         string GetMsg() override {
+//             return "🥶 " + ::Msg::GetMsg() + " 🥶";
+//         }
+// };
+
+// class Printer {
+//     public: 
+//         void PrintMsg(Msg *msg) {
+//             cout << msg->GetMsg() << endl;
+//         }
+// };
+
+
+// int main() {
+
+//     Msg3 ms("amir");
+//     Printer p;
+//     p.PrintMsg(&ms);
+//     return 0;
+// }
+
+class Car {
     public:
-        Msg(string msg) {
-            this->msg = msg;
+        void drive() {
+            cout << "car" << endl;
         }
-
-        virtual string GetMsg() {
-            return msg;
-        }
-    private:
-        string msg;
-
 };
 
-class Msg2 : public Msg {
-    public:
-        Msg2(string msg):Msg(msg) {}
-
-        string GetMsg() override {
-            return "6 " + ::Msg::GetMsg() + " 9";
-        }
-
-};
-
-class Msg3 : public Msg {
+class Airplane {
     public: 
-        Msg3(string msg):Msg(msg) {
-
-        }
-
-        string GetMsg() override {
-            return "🥶 " + ::Msg::GetMsg() + " 🥶";
+        void fly() {
+            cout << "airplane" << endl;
         }
 };
 
-class Printer {
+class Baxa :public Car, public Airplane {
     public: 
-        void PrintMsg(Msg *msg) {
-            cout << msg->GetMsg() << endl;
+        void shaha() {
+            cout << "shaha" << endl;
         }
 };
 
 
 int main() {
+    Baxa baxa;
+    baxa.shaha();
+    baxa.fly();
+    baxa.drive();
 
-    Msg3 ms("amir");
-    Printer p;
-    p.PrintMsg(&ms);
+    
     return 0;
 }
-
-
-
-
-
 
