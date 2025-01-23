@@ -1494,10 +1494,17 @@ class Human {
 
 
 int main() {
+    Human h;
+    best Best;
+    best2 Best2;
+
+    h.use(Best);
+
+    cout << endl << endl;
+
+    h.use(Best2);
 
 
-
-    
     return 0;
 }
 
