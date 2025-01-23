@@ -1401,62 +1401,103 @@ using namespace std;
 
 
 
-class Car {
+// class Car {
 
+//     public:
+//         Car() {
+//             cout << "trip started" << endl;
+//         }
+//         void ker() {
+//             cout << "car" << endl;
+//         }
+//         ~Car() {
+//             cout << "stop the car" << endl;
+//         }
+// };
+
+// class Airplane {
+//     public: 
+//         Airplane() {
+//             cout << "fly started" << endl;
+//         }
+//         void ker() {
+//             cout << "airplane" << endl;
+//         }
+
+//         ~Airplane() {
+//             cout << "fly ended" << endl;
+//         }
+// };
+
+// class Baxa :public Car, public Airplane {
+//     public: 
+
+//         Baxa() {
+//             cout << "baxa was created" << endl;
+//         }
+//         void shaha() {
+//             cout << "shaha" << endl;
+//         }
+
+//         ~Baxa() {
+//             cout << "baxa was delleted" << endl;
+//         }
+
+
+// };
+
+
+// int main() {
+//     Baxa baxa;
+//     cout << endl << endl;  
+
+//     ((Car)baxa).ker();         
+
+//     return 0;
+// }
+
+class IBycycle {
     public:
-        Car() {
-            cout << "trip started" << endl;
+        void virtual pedal() = 0;
+        void virtual steer() = 0;
+};
+
+class best : public IBycycle {
+    public:
+        void pedal() override {
+            cout << "go go go pedal" << endl;
         }
-        void drive() {
-            cout << "car" << endl;
-        }
-        ~Car() {
-            cout << "stop the car" << endl;
+        void steer() override {
+            cout << "go go steer" << endl;
         }
 };
 
-class Airplane {
+class best2 : public IBycycle {
     public: 
-        Airplane() {
-            cout << "fly started" << endl;
+        void pedal() override {
+            cout << "go go best 2" << endl;
         }
-        void fly() {
-            cout << "airplane" << endl;
-        }
-
-        ~Airplane() {
-            cout << "fly ended" << endl;
-        }
+        void steer() override {
+            cout << "go go best 2 steer" << endl;
+        } 
 };
 
-class Baxa :public Car, public Airplane {
+
+class Human {
     public: 
-
-        Baxa() {
-            cout << "baxa was created" << endl;
+        void use(IBycycle &bycycle) {
+            bycycle.pedal();
+            bycycle.steer();
         }
-        void shaha() {
-            cout << "shaha" << endl;
-        }
-
-        ~Baxa() {
-            cout << "baxa was delleted" << endl;
-        }
-
-
 };
+
 
 
 int main() {
-    Baxa baxa;
-    cout << endl << endl;           
 
+
+
+    
     return 0;
 }
-
-
-
-
-
-
 
