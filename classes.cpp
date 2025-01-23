@@ -1397,34 +1397,55 @@ using namespace std;
 // }
 
 class Car {
+
     public:
+        Car() {
+            cout << "trip started" << endl;
+        }
         void drive() {
             cout << "car" << endl;
+        }
+        ~Car() {
+            cout << "stop the car" << endl;
         }
 };
 
 class Airplane {
     public: 
+        Airplane() {
+            cout << "fly started" << endl;
+        }
         void fly() {
             cout << "airplane" << endl;
+        }
+
+        ~Airplane() {
+            cout << "fly ended" << endl;
         }
 };
 
 class Baxa :public Car, public Airplane {
     public: 
+
+        Baxa() {
+            cout << "baxa was created" << endl;
+        }
         void shaha() {
             cout << "shaha" << endl;
         }
+
+        ~Baxa() {
+            cout << "baxa was delleted" << endl;
+        }
+
+
 };
 
 
 int main() {
     Baxa baxa;
-    baxa.shaha();
-    baxa.fly();
-    baxa.drive();
+    cout << endl << endl;   
 
-    
     return 0;
 }
 
