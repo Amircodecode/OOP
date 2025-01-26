@@ -1527,17 +1527,35 @@ class Component {
     public:
         Component(string companyName) {
             cout << "component" << endl;
-            this-> company = companyName;
+            this-> companyName = companyName;
         }
-        string company;
+        string companyName;
 };
 
 class GPU : public Component {
     public: 
-
-
-    private:
-
-        
+        GPU(string companyName): Component(companyName) {
+            cout << "gpu" << endl;
+        }
 };
 
+
+class Prossesor : public Component {
+    public: 
+        Prossesor(string companyName) : Component(companyName) {
+            cout << "prossesor" << endl;
+        }
+};
+
+class GraphicCard : public GPU, public Prossesor{
+    public: 
+        GraphicCard(string GPUName, string ProssesorName) : GPU(GPUName),  Prossesor(ProssesorName) {
+            cout << "graphicCard" << endl;
+        }
+};
+
+int main() {
+    GraphicCard card("amir", "nazarov");
+    
+    return 0;
+}
