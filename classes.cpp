@@ -1469,55 +1469,70 @@ using namespace std;
 
 
 
-class IBycycle {
+// class IBycycle {
+//     public:
+//         void virtual pedal() = 0;
+//         void virtual steer() = 0;
+// };
+
+// class best : public IBycycle {
+//     public:
+//         void pedal() override {
+//             cout << "go go go pedal" << endl;
+//         }
+//         void steer() override {
+//             cout << "go go steer" << endl;
+//         }
+// };
+
+// class best2 : public IBycycle {
+//     public: 
+//         void pedal() override {
+//             cout << "go go best 2" << endl;
+//         }
+//         void steer() override {
+//             cout << "go go best 2 steer" << endl;
+//         } 
+// };
+
+
+// class Human {
+//     public: 
+//         void use(IBycycle &bycycle) {
+//             bycycle.pedal();
+//             bycycle.steer();
+//         }
+// };
+
+
+
+// int main() {
+//     Human h;
+//     best Best;
+//     best2 Best2;
+
+//     h.use(Best);
+
+//     cout << endl << endl;
+
+//     h.use(Best2);
+
+
+//     return 0;
+// }
+
+
+
+class Component {
     public:
-        void virtual pedal() = 0;
-        void virtual steer() = 0;
+        Component(string companyName) {
+            cout << "component" << endl;
+            this-> company = companyName;
+        }
+        string company;
 };
 
-class best : public IBycycle {
-    public:
-        void pedal() override {
-            cout << "go go go pedal" << endl;
-        }
-        void steer() override {
-            cout << "go go steer" << endl;
-        }
-};
-
-class best2 : public IBycycle {
+class GPU : public Component {
     public: 
-        void pedal() override {
-            cout << "go go best 2" << endl;
-        }
-        void steer() override {
-            cout << "go go best 2 steer" << endl;
-        } 
+        
 };
-
-
-class Human {
-    public: 
-        void use(IBycycle &bycycle) {
-            bycycle.pedal();
-            bycycle.steer();
-        }
-};
-
-
-
-int main() {
-    Human h;
-    best Best;
-    best2 Best2;
-
-    h.use(Best);
-
-    cout << endl << endl;
-
-    h.use(Best2);
-
-
-    return 0;
-}
-
