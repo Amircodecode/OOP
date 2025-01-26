@@ -1534,5 +1534,9 @@ class Component {
 
 class GPU : public Component {
     public: 
+
+
+    private:
+
         
 };
