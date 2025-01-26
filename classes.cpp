@@ -1,5 +1,7 @@
 #include <iostream>
 #include <string>
+#include <fstream>
+
 using namespace std;
 
 // class Human {
@@ -1610,3 +1612,61 @@ using namespace std;
 // }
 
 
+int main() {
+
+
+    // ofstream amir;
+
+    // string path = "shaha.txt";
+
+    // amir.open(path, ofstream::app);
+
+    // if (!amir.is_open()) {
+    //     cout << "error";
+    // }
+    // else {
+    //     for (int i = 0; i < 4; i++) {
+    //         cout << "enter the number: ";
+    //         int a;
+    //         cin >> a;
+    //         amir << a;
+    //         amir << "\n";
+    //     }
+    // }
+
+
+
+    ifstream amir;
+
+    string path = "shaha.txt";
+
+    amir.open(path);
+
+    if(!amir.is_open()) {
+        cout << "the error";
+    }
+    else {
+
+        cout << "sussess";
+        
+        // char ch;
+
+        // while (amir.get(ch)) {
+        //     cout << ch;
+        // }
+
+        string str;
+
+        while(!amir.eof()) {
+                str = "";
+                // amir >> str;
+
+                getline(amir, str);
+
+                cout << str << endl;    
+        }
+    }
+
+    amir.close();
+    return 0;
+}
