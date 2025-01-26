@@ -1523,39 +1523,90 @@ using namespace std;
 
 
 
-class Component {
-    public:
-        Component(string companyName) {
-            cout << "component" << endl;
-            this-> companyName = companyName;
-        }
-        string companyName;
-};
-
-class GPU : public Component {
-    public: 
-        GPU(string companyName): Component(companyName) {
-            cout << "gpu" << endl;
-        }
-};
 
 
-class Prossesor : public Component {
-    public: 
-        Prossesor(string companyName) : Component(companyName) {
-            cout << "prossesor" << endl;
-        }
-};
 
-class GraphicCard : public GPU, public Prossesor{
-    public: 
-        GraphicCard(string GPUName, string ProssesorName) : GPU(GPUName),  Prossesor(ProssesorName) {
-            cout << "graphicCard" << endl;
-        }
-};
 
-int main() {
-    GraphicCard card("amir", "nazarov");
+// class Component {
+//     public:
+//         Component(string companyName) {
+//             cout << "component" << endl;
+//             this-> companyName = companyName;
+//         }
+//         string companyName;
+// };
+
+// class GPU : public Component {
+//     public: 
+//         GPU(string companyName): Component(companyName) {
+//             cout << "gpu" << endl;
+//         }
+// };
+
+
+// class Prossesor : public Component {
+//     public: 
+//         Prossesor(string companyName) : Component(companyName) {
+//             cout << "prossesor" << endl;
+//         }
+// };
+
+// class GraphicCard : public GPU, public Prossesor{
+//     public: 
+//         GraphicCard(string GPUName, string ProssesorName) : GPU(GPUName),  Prossesor(ProssesorName) {
+//             cout << "graphicCard" << endl;
+//         }
+// };
+
+// int main() {
+//     GraphicCard card("amir", "nazarov");
     
-    return 0;
-}
+//     return 0;
+// }
+
+
+
+
+
+
+
+
+// class main {
+//     public: 
+//         main() {
+//             cout << "main" << endl;
+//         }
+// };
+
+// class One : public virtual main {
+//     public: 
+//         One() {
+//             cout << "one" << endl;
+//         }
+
+// };
+
+// class Two : public virtual main {
+//     public: 
+//         Two() {
+//             cout << "two" << endl;
+//         }
+// };
+
+// class Three : public One, public Two {
+//     public: 
+//         Three() {
+//             cout << "three" << endl;
+//         }
+// };
+
+// int main() {
+//     Three three;
+
+
+
+
+//     return 0;
+// }
+
+
